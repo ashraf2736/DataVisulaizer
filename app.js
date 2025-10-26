@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 class DataAnalyzer {
+=======
+ class DataAnalyzer {
+>>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
             constructor() {
                 this.chart = null;
                 this.ctx = document.getElementById('myChart').getContext('2d');
                 this.originalData = null;
+<<<<<<< HEAD
                 this.processedData = null;
                 this.currentFilters = {};
                 this.dataTypes = {};
+=======
+>>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
                 this.conversationHistory = [];
                 this.init();
             }
@@ -18,12 +25,15 @@ class DataAnalyzer {
             setupEventListeners() {
                 document.getElementById("fileInput").addEventListener("change", (e) => this.handleFileUpload(e));
                 document.getElementById("chartType").addEventListener("change", () => this.renderChartFromData());
+<<<<<<< HEAD
                 document.getElementById("showFilters").addEventListener("click", () => this.showPanel('filterPanel'));
                 document.querySelectorAll('.close-panel').forEach(btn => {
                     btn.addEventListener('click', (e) => this.hidePanel(e.target.dataset.panel));
                     });
                 document.getElementById("applyFilters").addEventListener("click", () => this.applyFilters());
                 document.getElementById("clearFilters").addEventListener("click", () => this.clearFilters());
+=======
+>>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
                 document.getElementById("downloadChart").addEventListener("click", () => this.downloadChart());
                 document.getElementById("home").addEventListener("click", () => this.showHome());
                 document.getElementById("tryNow").addEventListener("click", () => this.showApp());
@@ -123,14 +133,23 @@ class DataAnalyzer {
                 this.renderChart("bar", {
                     labels: ["Q1 2023", "Q2 2023", "Q3 2023", "Q4 2023"],
                     datasets: [
+<<<<<<< HEAD
                         { label: "Revenue", data: [120, 150, 180, 200], backgroundColor: '#f4f3f9ff', borderColor: '#100f15ff', borderWidth: 2 },
                         { label: "Profit", data: [30, 45, 60, 70], backgroundColor: '#0d1818ff', borderColor: '#f4fcfcff', borderWidth: 2 }
+=======
+                        { label: "Revenue", data: [120, 150, 180, 200], backgroundColor: '#3a45e3', borderColor: '#3a45e3', borderWidth: 2 },
+                        { label: "Profit", data: [30, 45, 60, 70], backgroundColor: '#8647ff', borderColor: '#8647ff', borderWidth: 2 }
+>>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
                     ]
                 });
             }
 
             randomColor() {
+<<<<<<< HEAD
                 const themeColors = ['#070a37ff', '#9776d3ff', '#45debaff', '#eeb5d4ff', '#c11a63ff', '#347ed1ff', '#a1cbd4ff', '#75aa1eff', '#eeda90ff', '#a14e82ff'];
+=======
+                const themeColors = ['#3a45e3', '#8647ff', '#667eea', '#764ba2', '#5b6bed', '#7c5aff', '#4a54e8', '#9555ff', '#6366f1', '#8b5cf6'];
+>>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
                 return themeColors[Math.floor(Math.random() * themeColors.length)];
             }
 
@@ -149,6 +168,7 @@ class DataAnalyzer {
                         data = this.processJsonData(jsonData);
                     } else if (file.name.endsWith(".csv")) {
                         data = this.parseCSV(text);
+<<<<<<< HEAD
                         this.originalData = data;
                         this.processedData = JSON.parse(JSON.stringify(this.originalData))
                     }
@@ -158,6 +178,14 @@ class DataAnalyzer {
                 this.analyzeDataTypes();
                 this.setupFilterControls();
                 this.renderChartFromData();
+=======
+                    }
+                    
+                    this.originalData = data;
+                    this.renderChartFromData();
+                    this.updateStats();
+                    
+>>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
                     const summary = this.generateDataSummary();
                     this.addAIMessage(`✅ <strong>Data Loaded Successfully!</strong><br><br>${summary}<br><br>💡 Try asking me: "Analyze trends", "Find patterns", or "Predict future values"`);
                 } catch (error) {
@@ -198,17 +226,24 @@ class DataAnalyzer {
                     }
                 }
                 
+<<<<<<< HEAD
                 return { labels, datasets, rawData };
             }
 
 
 
+=======
+                return { labels, datasets };
+            }
+
+>>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
             parseCSV(text) {
                 const rows = text.trim().split('\n').map(r => r.trim().split(','));
                 const headers = rows[0].map(h => h.trim());
                 const dataRows = rows.slice(1);
                 const labels = dataRows.map(r => r[0].trim());
                 const datasets = [];
+<<<<<<< HEAD
                  const rawData = {};
 
                 headers.forEach((header, index) => {
@@ -218,6 +253,9 @@ class DataAnalyzer {
         });
     });
 
+=======
+                
+>>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
                 for (let col = 1; col < headers.length; col++) {
                     const isNumeric = dataRows.every(r => r[col] && !isNaN(parseFloat(r[col].trim())));
                     if (isNumeric) {
@@ -228,14 +266,22 @@ class DataAnalyzer {
                     }
                 }
                 
+<<<<<<< HEAD
                 return { labels, datasets, rawData };
+=======
+                return { labels, datasets };
+>>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
             }
 
             renderChartFromData() {
                 if (!this.originalData) return;
                 
                 const chartType = document.getElementById("chartType").value;
+<<<<<<< HEAD
                 const dataCopy = JSON.parse(JSON.stringify(this.processedData));
+=======
+                const dataCopy = JSON.parse(JSON.stringify(this.originalData));
+>>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
                 let chartData;
 
                 if (chartType === 'scatter') {
@@ -300,6 +346,7 @@ class DataAnalyzer {
                 this.renderChart(chartType, chartData);
             }
 
+<<<<<<< HEAD
     analyzeDataTypes() {
         if (!this.originalData.rawData) return;
 
@@ -453,6 +500,8 @@ class DataAnalyzer {
 
 
 
+=======
+>>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
             downloadChart() {
                 if (!this.chart) return;
                 const link = document.createElement('a');
