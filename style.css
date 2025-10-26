@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 *, *::before, *::after {
-=======
-  *, *::before, *::after {
->>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -10,11 +6,7 @@
 
         body{
             font-family:'Ancizar sans';
-<<<<<<< HEAD
             background: linear-gradient(135deg, #28285e 0%, #627cc3 50%, #9bbee9 100%);
-=======
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
->>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
             background-attachment: fixed;
             overflow-x: hidden;
         }
@@ -28,11 +20,7 @@
             flex-direction: column;
         }
 
-<<<<<<< HEAD
          .navbar{
-=======
-        .navbar{
->>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
             height:10vh;
             background: rgba(30, 30, 46, 0.85);
             width: 90%;
@@ -48,16 +36,10 @@
             transform: translateX(-50%);
             z-index: 1000;
             border: 1px solid rgba(255, 255, 255, 0.1);
-<<<<<<< HEAD
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); */
         }
 
 
-=======
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-
->>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
         .content{
             display: flex;
             justify-content: space-between;
@@ -109,11 +91,7 @@
             text-shadow: 0 0 30px rgba(58, 69, 227, 0.5);
         }
 
-<<<<<<< HEAD
         /* .hero {
-=======
-        .hero {
->>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
             min-height: 90vh;
             width: 90%;
             display: flex;
@@ -122,7 +100,6 @@
             border-radius: 20px;
             padding-top: 15vh;
             margin-bottom: 5vh;
-<<<<<<< HEAD
         } */
 
         .hero {
@@ -133,9 +110,6 @@
     align-items: center;
     border-radius: 20px;
 }
-=======
-        }
->>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
 
         .container1 {
             height: 70%;
@@ -169,11 +143,7 @@
         }
         
         .btn-outline {
-<<<<<<< HEAD
             background: linear-gradient(135deg, #070c4d, #414787);
-=======
-            background: linear-gradient(135deg, #3a45e3, #8647ff);
->>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
             color: white;
             border: 2px solid transparent;
             box-shadow: 0 4px 15px rgba(58, 69, 227, 0.4);
@@ -214,7 +184,6 @@
             letter-spacing: 1px;
         }
 
-<<<<<<< HEAD
 
      .container2 {
     width: 50%;
@@ -263,38 +232,6 @@
   padding: 15vh 5% 50px;
 }
 
-=======
-        .container2 {
-            height: 100%;
-            width: 40%;
-            margin: 2%;
-        }
-
-        .spline{
-            width:100%;
-            height:100%;
-            border-radius: 25px;
-            overflow: hidden;
-            z-index: 1;
-            scrollbar-width: none;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        #spline{
-            height: 150%;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        #spline::-webkit-scrollbar, #spline2::-webkit-scrollbar {
-            display: none;
-        }
-
-        #spline, #spline2 {
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
->>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
 
         .main{
             min-height: 100vh;
@@ -317,11 +254,7 @@
 
         .main-header h1 {
             font-size: 2.5rem;
-<<<<<<< HEAD
             background: linear-gradient(135deg, #05061b, #1c142a);
-=======
-            background: linear-gradient(135deg, #3a45e3, #8647ff);
->>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
@@ -463,11 +396,7 @@
             width: 100%; 
             height: auto;
             margin: 0 auto;
-<<<<<<< HEAD
             background: rgba(129, 164, 217, 0.6);
-=======
-            background: rgba(42, 42, 53, 0.6);
->>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
             padding: 25px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -475,7 +404,6 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-<<<<<<< HEAD
         
 
 .filter-btn:hover, .insights-btn:hover {
@@ -695,8 +623,6 @@
 
 
 
-=======
->>>>>>> 4afd6d2debc26ecd40d31834df1bea06954234eb
         .ai-chat-section {
             width: 90%;
             max-width: 900px;
